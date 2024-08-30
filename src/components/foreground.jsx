@@ -52,10 +52,10 @@ const foreground = () => {
     ]
     return (
         <div ref={ref} className="fixed z-[3] top-0 left-0 w-full h-full flex gap-10 flex-wrap p-5">
-            {data.map((item, index) => (
-                <Card key={index} data={item} reference={ref} imageSrc={item.imageSrc} />
-            ))}
-        </div>
+        {data.map((item, index) => (
+            <Card key={index} data={item} reference={ref} imageSrc={`/images/${item.imageSrc}`} />
+        ))}
+    </div>
     )
 }
 
